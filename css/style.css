@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
+
+.hamburgerbtns {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #fff;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  display: grid;
+  place-items: center;
+
+  z-index: 1;
+
+  transition: all 0.3s ease-in-out;
+
+  animation: hamburgerani 0.5s ease-in;
+}
+
+@keyframes hamburgerani {
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hamburgerbtns:hover {
+  scale: 1.2;
+  /* rotate: 90deg; */
+}
+
+.hamburgerbtns.active {
+  rotate: 90deg;
+}
+
+.top.active {
+  rotate: -45deg;
+  transform: translate(-2px, -3px);
+  transform-origin: right;
+}
+
+.mid.active {
+  rotate: 1turn;
+  transform-origin: center;
+  opacity: 0;
+}
+
+.bottom.active {
+  rotate: 45deg;
+  transform: translate(-2px, 3px);
+  transform-origin: right;
+}
+
+.hamburger {
+  position: relative;
+}
+
+.hamburgerbtns .bar {
+  width: 25px;
+  height: 4px;
+  background-color: #201f23;
+  border-radius: 30px;
+  margin: 4px 0;
+
+  transition: all 0.3s ease-in;
+  /* transition-delay: 0.3s; */
+}
+
+.hamburgerbtns a {
+  position: absolute;
+  opacity: 0;
+}
+
+.bannercontainers {
+  height: 100vh;
+  background-color: #201f23;
+  display: grid;
+  place-items: center;
+  position: relative;
+
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.nametext {
+  animation: nametextani 0.5s ease-in-out;
+}
+
+@keyframes nametextani {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+    scale: 1.5;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.lhtext {
+  text-shadow: 4px 4px 0px #000, -4px 0 0px #000, 7px 4px 0 #fff;
+}
+
+.zzz-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow-y: hidden;
+}
+
+.zzz {
+  width: 15px;
+  margin: 0 10px;
+  animation: barani 0.8s ease-in-out backwards;
+  border-radius: 30px;
+}
+
+@media (max-width: 576px) {
+  .zzz {
+    width: 5px;
+  }
+}
+
+.zzz:nth-of-type(8),
+.zzz:nth-of-type(12) {
+  height: 26%;
+  background: linear-gradient(to top, #614385, #516395);
+  animation-delay: 0.2s;
+}
+
+.zzz:nth-of-type(7) {
+  height: 30%;
+  background: linear-gradient(to top, #7b4397, #dc2430);
+  animation-delay: 0.4s;
+}
+
+.zzz:nth-of-type(10) {
+  height: 32%;
+  background: linear-gradient(to top, #7b4397, #dc2430);
+  animation-delay: 0.2s;
+}
+
+.zzz:nth-of-type(6),
+.zzz:nth-of-type(14) {
+  height: 22%;
+  background: linear-gradient(to top, #eb3349, #f45c43);
+  animation-delay: 0.4s;
+}
+
+.zzz:nth-of-type(5) {
+  height: 25%;
+  background: linear-gradient(to top, #cc2b5e, #753a88);
+}
+
+.zzz:nth-of-type(9) {
+  height: 25%;
+  background: linear-gradient(to top, #cc2b5e, #753a88);
+  animation-delay: 0.1s;
+}
+
+.zzz:nth-of-type(4),
+.zzz:nth-of-type(16) {
+  height: 15%;
+  background: linear-gradient(to top, #2c3e50, #bdc3c7);
+  animation-delay: 0.6s;
+}
+
+.zzz:nth-of-type(3),
+.zzz:nth-of-type(11) {
+  height: 10%;
+  background: linear-gradient(to top, #ffafbd, #ffc3a0);
+  animation-delay: 0.8s;
+}
+
+.zzz:nth-of-type(2),
+.zzz:nth-of-type(15) {
+  height: 6%;
+  background: linear-gradient(to top, #ee9ca7, #ffdde1);
+  animation-delay: 0.5s;
+}
+
+.zzz:nth-of-type(1),
+.zzz:nth-of-type(13) {
+  height: 12%;
+  background: linear-gradient(to top, #eecda3, #ef629f);
+  animation-delay: 0.2s;
+}
+
+@keyframes barani {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
