@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loonhtet/portfolio-latest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loonhtet/portfolio-latest/issues"
+  },
+  "homepage": "https://github.com/loonhtet/portfolio-latest#readme",
+  "dependencies": {
+    "smooth-scrollbar": "^8.8.1"
+  }
+}
