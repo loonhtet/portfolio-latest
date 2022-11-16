@@ -21,9 +21,6 @@
 } */
 
 #home {
-  height: 100vh;
-  display: grid;
-  place-items: center;
   background-color: #201f23;
   position: relative;
 
@@ -204,23 +201,9 @@
 }
 
 .bannercontainers {
-  width: 84vw;
-  height: 90vh;
   display: grid;
   place-items: center;
   position: relative;
-
-  /* padding: 10px 50px; */
-  /* background: rgba(146, 146, 146, 0.08); */
-
-  /* backdrop-filter: blur(35px); */
-  /* -webkit-backdrop-filter: blur(35px); */
-
-  /* box-shadow: 0 8px 32px 0 rgba(146, 146, 146, 0.082); */
-  /* animation: nametextani 0.5s ease; */
-
-  /* border-radius: 50px; */
-  /* font-family: "Nunito Sans", sans-serif; */
 }
 
 .nametext {
