@@ -322,6 +322,10 @@
   place-items: center;
 
   background-color: #0f0f0f;
+  background-image: url("../img/about.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   overflow: hidden;
 }
@@ -330,8 +334,20 @@
   padding: 20px 40px;
   border-radius: 40px;
   /* background-color: #201f23; */
-  background-color: var(--bs-dark);
+  background: rgba(146, 146, 146, 0.08);
+
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+
+  box-shadow: 0 8px 32px 0 rgba(146, 146, 146, 0.08);
+
+  transition: all 0.2s ease-in;
 }
+
+/* .box:hover {
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+} */
 
 .about-socials a {
   display: block;
@@ -341,22 +357,29 @@
   color: #fff;
   border-radius: 40px;
   padding: 10px;
-  background-color: #2c3e50;
+  background: rgba(146, 146, 146, 0.08);
+
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+
+  box-shadow: 0 8px 32px 0 rgba(146, 146, 146, 0.082);
 
   position: relative;
 
   /* overflow: hidden; */
+
+  transition: all 0.3s ease-in-out;
 }
 
 .socialqrcodes {
-  width: 300px;
-  height: 320px;
+  width: 200px;
+  height: 220px;
 
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -100px);
-  scale: 0;
+  transform: translate(-50%, -150px);
+  /* scale: 0; */
   opacity: 0;
   pointer-events: none;
 
@@ -364,12 +387,11 @@
 }
 
 .about-socials a:hover {
-  opacity: 0.9;
+  background: rgba(146, 146, 146, 0.2);
 }
 
 .about-socials a:hover .socialqrcodes {
-  transform: translate(-50%, -200px);
-  scale: 1;
+  transform: translate(-50%, -220px);
   opacity: 1;
 }
 
