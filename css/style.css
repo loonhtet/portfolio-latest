@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 0.5rem;
   background-color: #222;
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   border-radius: 40px;
   /* background: linear-gradient(to top, #eb3349, #f45c43); */
 
@@ -428,13 +428,11 @@
 
 #projects {
   background-color: #201f23;
-  /* background-color: red; */
-  /* height: 60vh; */
 }
 
 .prjimgs img {
   width: 100%;
-  height: 390px;
+  height: 100%;
 
   border-radius: 40px;
 }
@@ -442,6 +440,13 @@
 .prjlists {
   height: 350px;
   overflow-y: scroll;
+  background: linear-gradient(darkblue 10%, transparent, transparent);
+  padding: 10px;
+  border-radius: 40px;
+}
+
+.prjlists::-webkit-scrollbar {
+  width: 0;
 }
 
 .prjbtns {
