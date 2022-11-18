@@ -439,6 +439,17 @@ body::-webkit-scrollbar-thumb {
   border-radius: 40px;
 }
 
+.prjnumbers {
+  background: rgba(146, 146, 146, 0.1);
+
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+  height: 30px;
+  text-align: center;
+  padding: 2px 15px;
+  border-radius: 40px;
+}
+
 .prjlists {
   background: linear-gradient(darkblue, #222222cc);
   padding: 10px;
@@ -515,3 +526,34 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* End Projects Section  */
+
+/* Start Contact Section  */
+
+.emailbtns,
+.contactbtns {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  border-radius: 40px;
+  padding: 10px 20px;
+  background: rgba(146, 146, 146, 0.1);
+
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+
+  margin: 10px 0;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.contactbtns:hover,
+.emailbtns:hover {
+  color: #fff;
+  transform: translateY(-10px);
+  background: rgba(146, 146, 146, 0.2);
+}
+
+/* End Contact Section  */
