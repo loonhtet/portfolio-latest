@@ -1,30 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   width: 0.5rem;
   background-color: #222;
 }
 
 body::-webkit-scrollbar-thumb {
   border-radius: 40px;
-  /* background: linear-gradient(to top, #eb3349, #f45c43); */
+  background: linear-gradient(to top, #eb3349, #f45c43);
 
   background: rgba(146, 146, 146, 0.1);
-}
+} */
 
 * {
   font-family: "Nunito Sans", sans-serif;
 }
 
-/* #my-scrollbar {
-  width: 100vw;
-  height: 200vh;
+#my-scrollbar {
+  width: 100%;
+  height: 100vh;
   overflow: auto;
-} */
+
+  background-color: #201f23;
+}
 
 #home {
-  background-color: #201f23;
   position: relative;
+  background-color: #201f23;
 
   /* background-image: url("../img/banner(1).png"); */
   background-position: center;
@@ -342,7 +344,7 @@ body::-webkit-scrollbar-thumb {
   place-items: center;
 
   background-color: #201f23;
-  background-image: url("../img/about(1).png");
+  background-image: url("../img/about.png");
   background-position: center;
   background-size: cover;
   /* background-size: 140%; */
@@ -432,21 +434,15 @@ body::-webkit-scrollbar-thumb {
 
 .prjimgs img {
   width: 100%;
-  height: 100%;
+  height: 80%;
 
   border-radius: 40px;
 }
 
 .prjlists {
-  height: 350px;
-  overflow-y: scroll;
-  background: linear-gradient(darkblue 10%, transparent, transparent);
+  background: linear-gradient(darkblue, #222222cc);
   padding: 10px;
   border-radius: 40px;
-}
-
-.prjlists::-webkit-scrollbar {
-  width: 0;
 }
 
 .prjbtns {

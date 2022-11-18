@@ -17,6 +17,11 @@ hamburgerbtn.addEventListener("click", () => {
   });
 });
 
-var Scrollbar = window.Scrollbar;
+const options = {
+  continuousScrolling: Boolean,
+  damping: 0.08,
+};
 
-Scrollbar.init(document.querySelector("#my-scrollbar"), options);
+// var Scrollbar = window.Scrollbar;
+
+// Scrollbar.init(document.querySelector("#my-scrollbar"), options);
