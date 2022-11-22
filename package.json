@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/loonhtet/portfolio-latest#readme",
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "grade-js": "^1.0.10",
     "smooth-scrollbar": "^8.8.1"
   }
 }
