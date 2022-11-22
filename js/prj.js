@@ -22,16 +22,13 @@ Grade(
 
 // Start Project image Section
 
-let allprjimgs = [
-  {
-    src: "",
-    href: "",
-    technologies: "",
-  },
-];
+const leftbtn = document.getElementById("left");
+const rightbtn = document.getElementById("right");
+
+var getheader = document.querySelector(".prjimgeffects");
 
 function* genfun() {
-  var index = 1;
+  let index = 1;
 
   while (true) {
     yield index++;
@@ -44,13 +41,20 @@ function* genfun() {
 
 var getgen = genfun();
 
-var getheader = document.querySelector(".prjimgeffects");
 getheader.src = `./img/test/prj${getgen.next().value}.png`;
 
-function autoload() {
+leftbtn.addEventListener("click", function () {
   getheader.src = `./img/test/prj${getgen.next().value}.png`;
-}
+});
 
-setInterval(autoload, 5000);
+rightbtn.addEventListener("click", function () {
+  getheader.src = `./img/test/prj${getgen.next().value}.png`;
+});
+
+// function autoload() {
+//   getheader.src = `./img/test/prj${getgen.next().value}.png`;
+// }
+
+// setInterval(autoload, 6000);
 
 // End Project image Section

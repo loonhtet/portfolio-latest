@@ -9,9 +9,16 @@ body {
 
 .prjimgbgs {
   position: relative;
+  overflow: hidden;
+
+  /* animation: prjimgbgsani 6s linear infinite; */
+}
+
+@keyframes prjimgbgsani {
 }
 
 .demobtns {
+  width: auto;
   bottom: 10px;
   right: 10px;
   position: absolute;
@@ -33,6 +40,27 @@ body {
   color: #fff;
   transform: translateY(-10px);
   background: rgba(146, 146, 146, 0.2);
+}
+
+.indicator-btns {
+  font-size: 28px;
+  background: none;
+  outline: none;
+  border: none;
+  color: #fff;
+
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.indicator-btns:nth-of-type(1) {
+  top: 50%;
+  left: 50px;
+}
+
+.indicator-btns:nth-of-type(2) {
+  top: 50%;
+  right: 50px;
 }
 
 .skilllogos-container {
