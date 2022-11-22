@@ -1,13 +1,14 @@
 // Start Grade js Section
 
 window.addEventListener("load", function () {
-  /*
-          A NodeList of all your image containers (Or a single Node).
-          The library will locate an <img /> within each
-          container to create the gradient from.
-       */
   Grade(document.querySelectorAll(".gradient-wrap"));
 });
+
+function autograde() {
+  Grade(document.querySelectorAll(".gradient-wrap"));
+}
+
+setInterval(autograde, 0);
 
 Grade(
   document.querySelectorAll(".gradient-wrap"),
@@ -18,3 +19,38 @@ Grade(
 );
 
 // End Grade js Section
+
+// Start Project image Section
+
+let allprjimgs = [
+  {
+    src: "",
+    href: "",
+    technologies: "",
+  },
+];
+
+function* genfun() {
+  var index = 1;
+
+  while (true) {
+    yield index++;
+
+    if (index >= 3) {
+      index = 1;
+    }
+  }
+}
+
+var getgen = genfun();
+
+var getheader = document.querySelector(".prjimgeffects");
+getheader.src = `./img/test/prj${getgen.next().value}.png`;
+
+function autoload() {
+  getheader.src = `./img/test/prj${getgen.next().value}.png`;
+}
+
+setInterval(autoload, 5000);
+
+// End Project image Section

@@ -6,3 +6,65 @@ body {
   /* border: 2px solid #fff; */
   border-radius: 40px;
 }
+
+.prjimgbgs {
+  position: relative;
+}
+
+.demobtns {
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 40px;
+  padding: 10px 20px;
+  background: rgba(146, 146, 146, 0.1);
+
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.demobtns:hover {
+  color: #fff;
+  transform: translateY(-10px);
+  background: rgba(146, 146, 146, 0.2);
+}
+
+.skilllogos-container {
+  cursor: default;
+  border-radius: 40px;
+  padding: 10px;
+  background: rgba(146, 146, 146, 0.1);
+
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+}
+
+.skilllogos-container li {
+  color: #fff;
+}
+
+.btncv {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 40px;
+  padding: 10px 20px;
+  background: rgba(146, 146, 146, 0.1);
+
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.btncv:hover {
+  color: #fff;
+  transform: translateY(-10px);
+  background: rgba(146, 146, 146, 0.2);
+}
