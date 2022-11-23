@@ -22,10 +22,8 @@ Grade(
 
 // Start Project image Section
 
-const leftbtn = document.getElementById("left");
-const rightbtn = document.getElementById("right");
-
 var getheader = document.querySelector(".prjimgeffects");
+var prjimgbg = document.querySelector(".prjimgbgs");
 
 function* genfun() {
   let index = 1;
@@ -43,18 +41,10 @@ var getgen = genfun();
 
 getheader.src = `./img/test/prj${getgen.next().value}.png`;
 
-leftbtn.addEventListener("click", function () {
+function autoload() {
   getheader.src = `./img/test/prj${getgen.next().value}.png`;
-});
+}
 
-rightbtn.addEventListener("click", function () {
-  getheader.src = `./img/test/prj${getgen.next().value}.png`;
-});
-
-// function autoload() {
-//   getheader.src = `./img/test/prj${getgen.next().value}.png`;
-// }
-
-// setInterval(autoload, 6000);
+setInterval(autoload, 6000);
 
 // End Project image Section

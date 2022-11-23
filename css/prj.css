@@ -1,34 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
+
+:root {
+  --mainColor: #212529;
+  --mainBtnColor: #343a40;
+  --BtnFocusColor: #495057;
+  --textColor: #6c757d;
+  --secondaryColor: #dee2e6;
+}
+
+::selection {
+  color: var(--bs-muted);
+  background-color: #292c35;
+}
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* #my-scrollbar {
+  width: 100vw;
+  height: auto;
+  overflow: auto;
+} */
+
 body {
-  background-color: #201f23;
+  background-color: var(--mainColor);
 }
 
 .prjimgeffects {
+  max-width: 650px;
+  min-width: 350px;
+  max-height: 350px;
+  min-height: 50px;
   /* border: 2px solid #fff; */
   border-radius: 40px;
 }
 
 .prjimgbgs {
+  opacity: 1;
   position: relative;
   overflow: hidden;
 
   /* animation: prjimgbgsani 6s linear infinite; */
 }
 
-@keyframes prjimgbgsani {
+.prjimgbgs.active {
+  /* animation: prjimgbgsani 6.2s linear infinite; */
 }
 
-.demobtns {
-  width: auto;
+/* @keyframes prjimgbgsani {
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+} */
+
+.progressbars {
+  width: 50%;
+  height: 5px;
+  background-color: var(--mainColor);
+  border-radius: 40px;
+
+  position: absolute;
   bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fluids {
+  width: 0;
+  height: 5px;
+  background-color: var(--secondaryColor);
+  border-radius: 40px;
+
+  animation: fluidsani 6s ease-in-out infinite;
+}
+
+@keyframes fluidsani {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.demobtns,
+.githubbtns {
+  width: auto;
+  bottom: 20px;
   right: 10px;
   position: absolute;
 
   font-size: 14px;
-  color: #fff;
+  color: var(--secondaryColor);
   text-decoration: none;
   border-radius: 40px;
   padding: 10px 20px;
-  background: rgba(146, 146, 146, 0.1);
+  background-color: var(--mainBtnColor);
 
   backdrop-filter: blur(35px);
   -webkit-backdrop-filter: blur(35px);
@@ -36,10 +113,15 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.demobtns:hover {
-  color: #fff;
+.githubbtns {
+  right: 100px;
+}
+
+.demobtns:hover,
+.githubbtns:hover {
+  color: var(--secondaryColor);
   transform: translateY(-10px);
-  background: rgba(146, 146, 146, 0.2);
+  background-color: var(--BtnFocusColor);
 }
 
 .indicator-btns {
@@ -67,23 +149,77 @@ body {
   cursor: default;
   border-radius: 40px;
   padding: 10px;
-  background: rgba(146, 146, 146, 0.1);
+  background-color: var(--mainBtnColor);
 
   backdrop-filter: blur(35px);
   -webkit-backdrop-filter: blur(35px);
 }
 
 .skilllogos-container li {
+  color: var(--secondaryColor);
+}
+
+.colorboxs {
+  min-width: 19.5%;
+  height: 200px;
+  background-color: red;
+  border: 2px solid var(--textColor);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.colorboxs:nth-of-type(1) {
+  background-color: var(--mainColor);
+}
+
+.colorboxs:nth-of-type(2) {
+  background-color: var(--mainBtnColor);
+}
+
+.colorboxs:nth-of-type(3) {
+  background-color: var(--BtnFocusColor);
+}
+
+.colorboxs:nth-of-type(4) {
+  background-color: var(--textColor);
+}
+
+.colorboxs:nth-of-type(5) {
+  background-color: var(--secondaryColor);
+}
+
+.colorboxs:hover {
+  transform: scaleY(1.1);
+}
+
+.colorboxs:hover p {
+  opacity: 0.5;
+}
+
+.colorboxs p {
+  padding: 10px;
   color: #fff;
+  text-align: center;
+  background-color: #222;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.titletexts {
+  color: var(--textColor);
+}
+
+.abouttext {
+  color: var(--textColor);
 }
 
 .btncv {
-  color: #fff;
+  color: var(--secondaryColor);
   font-size: 14px;
   text-decoration: none;
   border-radius: 40px;
   padding: 10px 20px;
-  background: rgba(146, 146, 146, 0.1);
+  background: var(--mainBtnColor);
 
   backdrop-filter: blur(35px);
   -webkit-backdrop-filter: blur(35px);
@@ -92,7 +228,7 @@ body {
 }
 
 .btncv:hover {
-  color: #fff;
+  color: var(--secondaryColor);
   transform: translateY(-10px);
-  background: rgba(146, 146, 146, 0.2);
+  background-color: var(--BtnFocusColor);
 }
