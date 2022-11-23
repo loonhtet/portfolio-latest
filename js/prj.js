@@ -22,6 +22,7 @@
 
 var getheader = document.querySelector(".prjimgeffects");
 var prjimgbg = document.querySelector(".prjimgbgs");
+var prjimgeffect = document.querySelector(".prjimgeffects");
 
 function* genfun() {
   let index = 1;
@@ -37,10 +38,14 @@ function* genfun() {
 
 var getgen = genfun();
 
-getheader.src = `./img/test/prj${getgen.next().value}.png`;
+// getheader.src = `./img/test/prj${getgen.next().value}.png`;
+// prjimgeffect.style.backgroundImage(`../img/test/prj${getgen.next().value}.png`);
 
 function autoload() {
-  getheader.src = `./img/test/prj${getgen.next().value}.png`;
+  // getheader.src = `./img/test/prj${getgen.next().value}.png`;
+  // prjimgeffect.style.backgroundImage(
+  //   `../img/test/prj${getgen.next().value}.png`
+  // );
 }
 
 setInterval(autoload, 6000);
