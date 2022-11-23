@@ -148,7 +148,7 @@ body {
 .skilllogos-container {
   cursor: default;
   border-radius: 40px;
-  padding: 10px;
+  padding: 10px 0;
   background-color: var(--mainBtnColor);
 
   backdrop-filter: blur(35px);

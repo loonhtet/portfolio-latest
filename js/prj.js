@@ -1,22 +1,20 @@
 // Start Grade js Section
 
-window.addEventListener("load", function () {
-  Grade(document.querySelectorAll(".gradient-wrap"));
-});
+// window.addEventListener("load", function () {
+//   Grade(document.querySelectorAll(".gradient-wrap"));
+// });
 
-function autograde() {
-  Grade(document.querySelectorAll(".gradient-wrap"));
-}
+// function autograde() {
+//   Grade(document.querySelectorAll(".gradient-wrap"));
+// }
 
-setInterval(autograde, 0);
+// setInterval(autograde, 0);
 
-Grade(
-  document.querySelectorAll(".gradient-wrap"),
-  null,
-  function (gradientData) {
-    // sample contents of `gradientData` can be inspected here https://jsonblob.com/57c4601ee4b0dc55a4f180f1
-  }
-);
+// Grade(
+//   document.querySelectorAll(".gradient-wrap"),
+//   null,
+//   function (gradientData) {}
+// );
 
 // End Grade js Section
 
