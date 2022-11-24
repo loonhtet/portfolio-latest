@@ -27,69 +27,34 @@ body {
   background-color: var(--mainColor);
 }
 
+/* Start Carousel Section  */
+
+.canvas-container {
+  height: 400px;
+  z-index: 0;
+}
+
 .prjimgeffects {
-  max-width: 650px;
-  min-width: 350px;
-  max-height: 350px;
-  min-height: 50px;
-  /* border: 2px solid #fff; */
+  width: 600px;
+  height: 350px;
   border-radius: 40px;
-}
-
-.prjimgbgs {
-  opacity: 1;
-  position: relative;
-  overflow: hidden;
-  background-image: url("../img/test/prj1.png");
-  background-position: center;
+  /* background-image: url("../img/test/prj1.png"); */
   background-size: cover;
-  background-repeat: none;
-  z-index: -2;
+  background-position: center;
 
-  transition: all 0.3s ease-in-out;
-}
-
-.blurimgs {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-
-  z-index: -1;
-}
-
-.progressbars {
-  width: 50%;
-  height: 5px;
-  background-color: var(--mainColor);
-  border-radius: 40px;
+  transition: all 0.5s ease-in-out;
 
   position: absolute;
-  bottom: 10px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
-.fluids {
-  width: 0;
-  height: 5px;
-  background-color: var(--secondaryColor);
-  border-radius: 40px;
-
-  animation: fluidsani 6s ease-in-out infinite;
-}
-
-@keyframes fluidsani {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
+@media (width <= 992px) {
+  .prjimgeffects {
+    width: 90%;
+    height: 200px;
   }
 }
 
@@ -97,7 +62,7 @@ body {
 .githubbtns {
   width: auto;
   bottom: 20px;
-  right: 10px;
+  right: 20px;
   position: absolute;
 
   font-size: 14px;
@@ -114,7 +79,7 @@ body {
 }
 
 .githubbtns {
-  right: 100px;
+  right: 110px;
 }
 
 .demobtns:hover,
@@ -124,26 +89,7 @@ body {
   background-color: var(--BtnFocusColor);
 }
 
-.indicator-btns {
-  font-size: 28px;
-  background: none;
-  outline: none;
-  border: none;
-  color: #fff;
-
-  position: absolute;
-  transform: translateY(-50%);
-}
-
-.indicator-btns:nth-of-type(1) {
-  top: 50%;
-  left: 50px;
-}
-
-.indicator-btns:nth-of-type(2) {
-  top: 50%;
-  right: 50px;
-}
+/* End Carousel Section  */
 
 .skilllogos-container {
   cursor: default;

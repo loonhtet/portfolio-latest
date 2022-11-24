@@ -30,7 +30,7 @@ function* genfun() {
   while (true) {
     yield index++;
 
-    if (index >= 3) {
+    if (index >= 5) {
       index = 1;
     }
   }
@@ -40,12 +40,16 @@ var getgen = genfun();
 
 // getheader.src = `./img/test/prj${getgen.next().value}.png`;
 // prjimgeffect.style.backgroundImage(`../img/test/prj${getgen.next().value}.png`);
+prjimgeffect.style.backgroundImage = `url("../img/test/prj${
+  getgen.next().value
+}.png")`;
 
 function autoload() {
   // getheader.src = `./img/test/prj${getgen.next().value}.png`;
-  // prjimgeffect.style.backgroundImage(
-  //   `../img/test/prj${getgen.next().value}.png`
-  // );
+
+  prjimgeffect.style.backgroundImage = `url("../img/test/prj${
+    getgen.next().value
+  }.png")`;
 }
 
 setInterval(autoload, 6000);
@@ -87,24 +91,24 @@ var granimInstance = new Granim({
   },
 });
 
-document
-  .getElementById("default-state-cta")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    granimInstance.changeState("default-state");
-  });
+// document
+//   .getElementById("default-state-cta")
+//   .addEventListener("click", function (e) {
+//     e.preventDefault();
+//     granimInstance.changeState("default-state");
+//   });
 
-document
-  .getElementById("violet-state-cta")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    granimInstance.changeState("violet-state");
-  });
+// document
+//   .getElementById("violet-state-cta")
+//   .addEventListener("click", function (e) {
+//     e.preventDefault();
+//     granimInstance.changeState("violet-state");
+//   });
 
-document
-  .getElementById("orange-state-cta")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    granimInstance.changeState("orange-state");
-  });
+// document
+//   .getElementById("orange-state-cta")
+//   .addEventListener("click", function (e) {
+//     e.preventDefault();
+//     granimInstance.changeState("orange-state");
+//   });
 // End Granim Area
