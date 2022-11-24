@@ -51,3 +51,60 @@ function autoload() {
 setInterval(autoload, 6000);
 
 // End Project image Section
+
+// Start Glide Area
+
+// var glide = new Glide(".glide", {
+//   type: "carousel",
+//   slidesToShow: 1,
+//   preView: 2,
+//   slidesToScroll: 1,
+// });
+
+// new Glide(".glide").mount();
+
+// End Glide Area
+
+// Start Granim Area
+
+var granimInstance = new Granim({
+  element: "#canvas-interactive",
+  name: "interactive-gradient",
+  elToSetClassOn: ".canvas-interactive-wrapper",
+  direction: "diagonal",
+  isPausedWhenNotInView: true,
+  stateTransitionSpeed: 500,
+  states: {
+    "default-state": {
+      gradients: [["#B3FFAB", "#12FFF7"]],
+    },
+    "violet-state": {
+      gradients: [["#9D50BB", "#6E48AA"]],
+    },
+    "orange-state": {
+      gradients: [["#FF4E50", "#F9D423"]],
+    },
+  },
+});
+
+document
+  .getElementById("default-state-cta")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    granimInstance.changeState("default-state");
+  });
+
+document
+  .getElementById("violet-state-cta")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    granimInstance.changeState("violet-state");
+  });
+
+document
+  .getElementById("orange-state-cta")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    granimInstance.changeState("orange-state");
+  });
+// End Granim Area

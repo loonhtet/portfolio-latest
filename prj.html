@@ -4,6 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
 
+    <!-- glide css  -->
+    <link rel="stylesheet" href="./node_modules/@glidejs/glide/dist/css/glide.core.min.css" type="text/css">
+    <link rel="stylesheet" href="./node_modules/@glidejs/glide/dist/css/glide.theme.css">
+
 
     <!-- bootstrap css  -->
     <link
@@ -12,10 +16,11 @@
       type="text/css"
     />
 
+
     <!-- smoothscroll css  -->
 
     <!-- remixicon css cdn  -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" type="text/css">
 
     <!-- project css  -->
     <link rel="stylesheet" href="./css/prj.css" type="text/css">
@@ -39,8 +44,9 @@
         </div>
     </section>
 
-    <section class="container my-4">
-        <div class="row mx-1">
+    <section class="container my-5">
+        <h3 class="titletexts">Technologies</h3>
+        <div class="row">
             <ul class="list-unstyled d-flex justify-content-around skilllogos-container">
                 <li>HTML</li>
                 <li>CSS</li>
@@ -70,6 +76,19 @@
         <a href="" class="float-end btncv mb-5">Download CV</a>
     </section>
 
+
+    <section class="container my-5">
+        <div class="canvas-interactive-wrapper">
+            <canvas id="canvas-interactive"></canvas>
+            <div class="cta-wrapper">
+                <a href="#default-state" id="default-state-cta" class="active">Default state</a>
+                <a href="#violet-state" id="violet-state-cta">Violet state</a>
+                <a href="#orange-state" id="orange-state-cta">Orange state</a>
+            </div>
+        </div>
+    </section>
+     
+
     
     <!-- smoothscroll js  -->
     <!-- <script src="./node_modules/smooth-scrollbar/dist/smooth-scrollbar.js"></script> -->
@@ -77,8 +96,15 @@
     <!-- grade js  -->
     <script src="./grade/docs/dist/grade.js"></script>
 
+    <!-- granim js  -->
+    <script src="./node_modules/granim/dist/granim.min.js"></script>
+
+    <!-- glide js  -->
+    <script src="./node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
     <!-- homepage js  -->
     <script src="./js/app.js" type="text/javascript"></script>
+
     
     <!-- project js  -->
     <script src="./js/prj.js" type="text/javascript"></script>
