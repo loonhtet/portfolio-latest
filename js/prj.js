@@ -91,6 +91,31 @@ var granimInstance = new Granim({
   },
 });
 
+let colorStates = ["default-state", "violet-state", "orange-state"];
+// console.log(colorStates[0]);
+
+function* changeState() {
+  let idx = 0;
+
+  while (true) {
+    yield idx++;
+
+    if (idx >= colorStates.length) {
+      idx = 0;
+    }
+  }
+}
+
+var getstate = changeState();
+
+granimInstance.changeState(`${colorStates[getstate.next().value]}`);
+
+function autochangestate() {
+  granimInstance.changeState(`${colorStates[getstate.next().value]}`);
+}
+
+setInterval(autochangestate, 6000);
+
 // document
 //   .getElementById("default-state-cta")
 //   .addEventListener("click", function (e) {

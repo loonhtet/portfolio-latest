@@ -35,8 +35,8 @@ body {
 }
 
 .prjimgeffects {
-  width: 600px;
-  height: 350px;
+  width: 40%;
+  height: 80%;
   border-radius: 40px;
   /* background-image: url("../img/test/prj1.png"); */
   background-size: cover;
@@ -51,10 +51,10 @@ body {
   z-index: 1;
 }
 
-@media (width <= 992px) {
+@media (width <= 900px) {
   .prjimgeffects {
     width: 90%;
-    height: 200px;
+    height: 60%;
   }
 }
 
