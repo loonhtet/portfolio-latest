@@ -1,27 +1,20 @@
-// Start Grade js Section
+// Start SmoothScrollbar Area
 
-// window.addEventListener("load", function () {
-//   Grade(document.querySelectorAll(".gradient-wrap"));
-// });
+const options = {
+  continuousScrolling: Boolean,
+  damping: 0.08,
+};
 
-// function autograde() {
-//   Grade(document.querySelectorAll(".gradient-wrap"));
-// }
+var Scrollbar = window.Scrollbar;
+Scrollbar.init(document.querySelector("#my-scrollbar"), options);
 
-// setInterval(autograde, 0);
-
-// Grade(
-//   document.querySelectorAll(".gradient-wrap"),
-//   null,
-//   function (gradientData) {}
-// );
-
-// End Grade js Section
+// End SmoothScrollbar Area
 
 // Start Project image Section
 
 var getheader = document.querySelector(".prjimgeffects");
 var prjimgbg = document.querySelector(".prjimgbgs");
+// console.log(colorStates[0]);
 var prjimgeffect = document.querySelector(".prjimgeffects");
 
 function* genfun() {
@@ -38,15 +31,11 @@ function* genfun() {
 
 var getgen = genfun();
 
-// getheader.src = `./img/test/prj${getgen.next().value}.png`;
-// prjimgeffect.style.backgroundImage(`../img/test/prj${getgen.next().value}.png`);
 prjimgeffect.style.backgroundImage = `url("../img/test/prj${
   getgen.next().value
 }.png")`;
 
 function autoload() {
-  // getheader.src = `./img/test/prj${getgen.next().value}.png`;
-
   prjimgeffect.style.backgroundImage = `url("../img/test/prj${
     getgen.next().value
   }.png")`;
@@ -55,19 +44,6 @@ function autoload() {
 setInterval(autoload, 6000);
 
 // End Project image Section
-
-// Start Glide Area
-
-// var glide = new Glide(".glide", {
-//   type: "carousel",
-//   slidesToShow: 1,
-//   preView: 2,
-//   slidesToScroll: 1,
-// });
-
-// new Glide(".glide").mount();
-
-// End Glide Area
 
 // Start Granim Area
 
@@ -92,7 +68,6 @@ var granimInstance = new Granim({
 });
 
 let colorStates = ["default-state", "violet-state", "orange-state"];
-// console.log(colorStates[0]);
 
 function* changeState() {
   let idx = 0;
@@ -115,25 +90,3 @@ function autochangestate() {
 }
 
 setInterval(autochangestate, 6000);
-
-// document
-//   .getElementById("default-state-cta")
-//   .addEventListener("click", function (e) {
-//     e.preventDefault();
-//     granimInstance.changeState("default-state");
-//   });
-
-// document
-//   .getElementById("violet-state-cta")
-//   .addEventListener("click", function (e) {
-//     e.preventDefault();
-//     granimInstance.changeState("violet-state");
-//   });
-
-// document
-//   .getElementById("orange-state-cta")
-//   .addEventListener("click", function (e) {
-//     e.preventDefault();
-//     granimInstance.changeState("orange-state");
-//   });
-// End Granim Area

@@ -3,6 +3,9 @@ const topbar = document.querySelector(".top");
 const midbar = document.querySelector(".mid");
 const bottombar = document.querySelector(".bottom");
 
+const hamburgerbtnhref = document.querySelectorAll(".hrefbtn");
+console.log(hamburgerbtnhref);
+
 hamburgerbtn.addEventListener("click", () => {
   hamburgerbtn.classList.toggle("active");
   topbar.classList.toggle("active");
@@ -19,9 +22,9 @@ const options = {
   damping: 0.08,
 };
 
-// var Scrollbar = window.Scrollbar;
+var Scrollbar = window.Scrollbar;
 
-// Scrollbar.init(document.querySelector("#my-scrollbar"), options);
+Scrollbar.init(document.querySelector("#my-scrollbar"), options);
 
 // Start Project Section
 
